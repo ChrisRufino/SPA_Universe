@@ -1,4 +1,4 @@
-const route = {
+const routes = {
   "/home": "/pages/home.html",
   "/exploracao": "/pages/exploracao.html",
   "/universe": "/pages/universe.html",

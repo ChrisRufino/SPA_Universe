@@ -14,19 +14,40 @@
 
   <!-- <link rel="stylesheet" href="./assests/style.css" /> -->
   <body>
-    <div id="home">
-      <main class="navigation">
-        <nav>
-          <img src="./assests/img/Vector.svg" alt="" />
+    <!-- <main class="navigation"> -->
+    <nav>
+      <!-- <img src="./assests/img/Vector.svg" alt="" /> -->
 
-          <a href="/home" onclick="route()">Home</a>
-          <a href="/universe" onclick="route()">O Universo</a>
-          <a href="/exploracao" onclick="route()">Exploração</a>
-          <a href="/404" onclick="route()">Error</a>
-        </nav>
-      </main>
-    </div>
+      <a href="/home" onclick="route()">Home</a>
+      <a href="/universe" onclick="route()">O Universo</a>
+      <a href="/exploracao" onclick="route()">Exploração</a>
+      <a href="/404" onclick="route()">Error</a>
+    </nav>
+    <!-- </main> -->
+    <div id="home"></div>
 
-    <script src="./js/script.js" type="module"></script>
+    <script>
+      const routes = {
+        "/home": "/pages/home.html",
+        "/exploracao": "/pages/exploracao.html",
+        "/universe": "/pages/universe.html",
+        404: "/pages/404.html",
+      }
+
+      function route(event) {
+        event = event || window.event
+        event.preventDefault()
+
+        window.history.pushState({}, "", event.target.href)
+
+        handle()
+      }
+
+      function handle() {
+        const pathname = window.location.pathname
+
+        console.log(pathname)
+      }
+    </script>
   </body>
 </html>
