@@ -1,21 +1,13 @@
-const routes = {
-  "/home": "/pages/home.html",
-  "/exploracao": "/pages/exploracao.html",
-  "/universe": "/pages/universe.html",
-  404: "/pages/404.html",
-}
+import { Router } from './router.js';
 
-function route(event) {
-  event = event || window.event
-  event.preventDefault()
+const router = new Router();
 
-  window.history.pushState({}, "", event.target.href)
+router.add('/home', '/pages/home.html');
+router.add('/exploracao', '/pages/exploracao.html');
+router.add('/universe', '/pages/universe.html');
+router.add(404, '/pages/404.html');
 
-  handle()
-}
+router.handle();
 
-function handle() {
-  const pathname = window.location.pathname
-
-  console.log(pathname)
-}
+window.onpopstate = () => router.handle();
+window.route = () => router.route();
