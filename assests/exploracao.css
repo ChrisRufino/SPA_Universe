@@ -1,0 +1,9 @@
+@import url(./style.css);
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url(./img/mountains-universe-3.png) no-repeat top center/cover;
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+}
