@@ -13,10 +13,13 @@ body {
 }
 
 button {
-  padding: 3.2rem;
+  padding: 1.2rem;
+  width: 19.5rem;
   background: none;
   text-decoration: none;
   border-color: var(--style-word);
   border-radius: 0.5rem;
   color: var(--style-word);
+
+  cursor: pointer;
 }
