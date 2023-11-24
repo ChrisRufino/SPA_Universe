@@ -25,7 +25,11 @@
   font-size: 2.4rem;
   color: var(--noSelect);
 }
-
+.navigation a:hover {
+  color: var(--style-word);
+  font-weight: 700;
+  font-size: 2.6rem;
+}
 body {
   font-family: 'Roboto', sans-serif;
   height: 100vh;
@@ -35,4 +39,16 @@ body {
 }
 h1 {
   font-size: 5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-top: 1.6rem;
+  margin-left: 10rem;
+}
+
+button:hover {
+  background-color: var(--style-word);
+  color: black;
+  border-color: black;
 }
